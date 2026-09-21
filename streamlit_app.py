@@ -2,7 +2,7 @@
 Detector Automático de Aves - BMAP APECO
 ========================================
 App de Streamlit para detectar 16 clases de aves marinas y costeras
-usando el modelo YOLO26n entrenado por el equipo BMAP.
+usando el modelo YOLO26 en sus tamaños : n,s,m,l y x .
 """
 
 import streamlit as st
@@ -128,12 +128,12 @@ def main():
         layout="wide"
     )
     
-    st.title("🐦 Detector Automático de Aves")
+    st.title("🐦 Detector Automático de Aves Marinas")
     st.markdown("""
-    **BMAP APECO - Programa de Monitoreo Marino**
+    **PC1 - Ciencia de datos 2**
     
-    Esta herramienta detecta automáticamente **9 especies de aves marinas y su estadío respectivo (Juvenil, Adulto, etc)**
-    en fotografías usando inteligencia artificial (YOLOv26 tamaño nano).
+    Esta herramienta detecta automáticamente **7 clases de aves marinas y su estadío respectivo (Juvenil, Adulto)**
+    en fotografías usando inteligencia artificial (YOLOv26 tañaños : n,s,m,l y x).
     """)
     
     st.divider()
