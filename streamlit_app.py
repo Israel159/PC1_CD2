@@ -1,7 +1,7 @@
 """
 Detector Automático de Aves - BMAP APECO
 ========================================
-App de Streamlit para detectar 16 clases de aves marinas y costeras
+App de Streamlit para detectar 9 clases de aves marinas y costeras
 usando el modelo YOLO26n entrenado por el equipo BMAP.
 """
 
@@ -27,11 +27,8 @@ MODELOS = {
     "26x": "modelos/26x.pt",
 }
 
-CLASS_NAMES = [
-    'chuita', 'chuita adulta', 'cushuri adulto', 'cushuri juvenil',
-    'gallinazo cabeza roja', 'gaviota peruana adulta', 'guanay adulto',
-    'pelicano adulto', 'pelicano juvenil', 'pichon pinguino',
-    'pichon piquero', 'pinguino adulto', 'pinguino juvenil',
+CLASS_NAMES = ['pelicano adulto', 'pelicano juvenil',
+    'pinguino adulto', 'pinguino juvenil',
     'piquero adulto', 'piquero juvenil', 'zarcillo'
 ]
 
@@ -123,17 +120,17 @@ def detectar_aves(imagen, modelo, confianza_minima, iou_maximo):
 
 def main():
     st.set_page_config(
-        page_title="Detector de Aves BMAP",
+        page_title="Detector de Aves marinas",
         page_icon="🐦",
         layout="wide"
     )
     
-    st.title("🐦 Detector Automático de Aves")
+    st.title("🐦 Detector Automático de Aves Marinas")
     st.markdown("""
-    **BMAP APECO - Programa de Monitoreo Marino**
+    **PC1 - Ciencia de Datos 2**
     
-    Esta herramienta detecta automáticamente **9 especies de aves marinas y su estadío respectivo (Juvenil, Adulto, etc)**
-    en fotografías usando inteligencia artificial (YOLOv26 tamaño nano).
+    Esta herramienta detecta automáticamente **7 clases de aves marinas en donde detalla su estadío respectivo (Juvenil, Adulto)**
+    en fotografías usando inteligencia artificial (YOLOv26 tamaños: n,s,m,l y x).
     """)
     
     st.divider()
