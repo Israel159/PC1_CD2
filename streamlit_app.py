@@ -27,10 +27,7 @@ MODELOS = {
     "26x": "modelos/26x.pt",
 }
 
-CLASS_NAMES = ['pelicano adulto', 'pelicano juvenil',
-    'pinguino adulto', 'pinguino juvenil',
-    'piquero adulto', 'piquero juvenil', 'zarcillo'
-]
+CLASS_NAMES = ['chuita', 'chuita adulta', 'cushuri adulto', 'cushuri juvenil', 'gallinazo cabeza roja', 'gaviota peruana adulta', 'guanay adulto', 'pelicano adulto', 'pelicano juvenil', 'pichon pinguino', 'pichon piquero', 'pinguino adulto', 'pinguino juvenil', 'piquero adulto', 'piquero juvenil', 'zarcillo]
 
 CLASS_COLORS = {
     'chuita': '#e6194b', 'chuita adulta': '#3cb44b',
@@ -161,7 +158,7 @@ def main():
         
         st.divider()
         
-        st.header("📋 Especies detectables")
+        st.header("📋 Clases detectables")
         for nombre in CLASS_NAMES:
             color = CLASS_COLORS.get(nombre, '#5a7d4a')
             st.markdown(
